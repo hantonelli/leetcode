@@ -1,11 +1,10 @@
 package main
 
 import (
-	"math"
-	"math/rand"
 	"sort"
 	"testing"
 
+	dataStructures "github.com/hantonelli/leetcode/data-structures"
 	"github.com/stretchr/testify/require"
 )
 
@@ -41,15 +40,7 @@ func Test(t *testing.T) {
 	}
 }
 
-func randArr(size int) []int {
-	arr := make([]int, size)
-	for i := 0; i < size; i++ {
-		arr[i] = rand.Intn(math.MaxInt64)
-	}
-	return arr
-}
-
-var base []int = randArr(1000000)
+var base []int = dataStructures.RandArr(1000000)
 
 func Benchmark(b *testing.B) {
 	input := make([]int, 1000000)
