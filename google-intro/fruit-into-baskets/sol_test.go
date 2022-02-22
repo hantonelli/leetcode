@@ -26,6 +26,6 @@ func Test(t *testing.T) {
 	}
 
 	for _, te := range tests {
-		require.Equal(t, te.count, totalFruit(te.tree))
+		require.Equal(t, te.count, totalFruit2(te.tree))
 	}
 }
