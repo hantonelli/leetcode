@@ -1,31 +1,34 @@
 package robotRoomCleaner
 
+type Robot struct{}
 
-type Robot struct {}
-func (robot *Robot) Move() bool {}
-func (robot *Robot) TurnLeft() {}
+func (robot *Robot) Move() bool { return false }
+func (robot *Robot) TurnLeft()  {}
 func (robot *Robot) TurnRight() {}
-func (robot *Robot) Clean() {}
- 
+func (robot *Robot) Clean()     {}
+
 type PlaceState int
+
 const (
-	_ PlaceState = iota
+	PlaceStateUndefined PlaceState = iota
 	PlaceStateWall
 	PlaceStateEmpty
 )
- 
+
 type Direction int
+
 const (
-	undefined Direction = iota
+	DirectionUndefined Direction = iota
 	DirectionUp
 	DirectionDown
 	DirectionLeft
 	DirectionRight
 )
- 
+
 type Movement int
+
 const (
-	undefined Movement = iota
+	_ Movement = iota
 	MovementForward
 	MovementTurnLeft
 	MovementTurnRight
@@ -37,22 +40,21 @@ func cleanRoom2(robot Robot) {
 	var pos [2]int
 	visited := map[[2]int]PlaceState{}
 	toVisit := [][2]int{}
-	dir := DirectionUp
-	movement := MovementForward
+	// dir := DirectionUp
+	// movement := MovementForward
 
-	visited[[2]int{i, j}]= PlaceStateEmpty
+	visited[[2]int{i, j}] = PlaceStateEmpty
 	for 0 < len(toVisit) {
 		pos = toVisit[0]
 		i = pos[0]
 		j = pos[1]
-		visited[[2]int{i, j}]= PlaceStateEmpty
+		visited[[2]int{i, j}] = PlaceStateEmpty
 
-
-		toVisit = append(toVisit, [2]int{i, j-1}, [2]int{i, j+1}, [2]int{i-1, j}, [2]int{i+1, j})
+		toVisit = append(toVisit, [2]int{i, j - 1}, [2]int{i, j + 1}, [2]int{i - 1, j}, [2]int{i + 1, j})
 	}
 }
 
-func addToVisit(i, j int, d Direction, toVisit *[][2]int, visited *[[2]int) {
+func addToVisit(i, j int, d Direction, toVisit *[][2]int, visited *[2]int) {
 	// Add TurnLeft, TurnRight, Forward
 	switch d {
 	case DirectionUp:
@@ -61,7 +63,6 @@ func addToVisit(i, j int, d Direction, toVisit *[][2]int, visited *[[2]int) {
 	case DirectionLeft:
 	case DirectionRight:
 	}
-
 
 }
 
@@ -112,4 +113,5 @@ func getNewDirection(d Direction, m Movement) Direction {
 			return d
 		}
 	}
+	return DirectionUndefined
 }

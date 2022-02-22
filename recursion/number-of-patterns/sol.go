@@ -4,7 +4,7 @@ func numberOfPatterns(m int, n int) int {
 	visited := make(map[[2]int]bool, 9)
 	count := 0
 	for k := n; k < m; k++ {
-		count += processWithLength(k, &visited)
+		count += processWithLength(k, visited)
 	}
 	return count
 }

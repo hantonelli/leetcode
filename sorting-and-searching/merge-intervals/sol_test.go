@@ -3,7 +3,6 @@ package mergeintervals
 import (
 	"testing"
 
-	dataStructures "github.com/hantonelli/leetcode/data-structures"
 	"github.com/stretchr/testify/require"
 )
 
@@ -32,19 +31,5 @@ func Test(t *testing.T) {
 
 	for _, tt := range tests {
 		require.EqualValues(t, tt.expected, merge(tt.intervals))
-	}
-}
-
-var base [][]int = dataStructures.RandArrOfArr(10000, 100)
-
-func Benchmark_Sol(b *testing.B) {
-	for i := 0; i < b.N; i++ {
-		merge(base)
-	}
-}
-
-func Benchmark_SolFast(b *testing.B) {
-	for i := 0; i < b.N; i++ {
-		mergeFast(base)
 	}
 }
