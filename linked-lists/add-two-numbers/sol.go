@@ -1,7 +1,7 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/data-structures"
+	ll "github.com/hantonelli/leetcode/ds"
 )
 
 func addTwoNumbers(l1 *ll.ListNode, l2 *ll.ListNode) *ll.ListNode {

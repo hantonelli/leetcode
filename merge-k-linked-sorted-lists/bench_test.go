@@ -3,11 +3,11 @@ package main
 import (
 	"testing"
 
-	dataStructures "github.com/hantonelli/leetcode/data-structures"
-	ll "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
+	ll "github.com/hantonelli/leetcode/ds"
 )
 
-var base []int = dataStructures.RandArr(1000000)
+var base []int = ds.RandArr(1000000)
 
 var f *ll.ListNode
 

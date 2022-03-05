@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	ll "github.com/hantonelli/leetcode/data-structures"
+	ll "github.com/hantonelli/leetcode/ds"
 )
 
 func Test(t *testing.T) {

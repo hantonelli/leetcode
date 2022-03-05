@@ -1,4 +1,4 @@
-package dataStructures
+package ds
 
 type element struct {
 	data interface{}

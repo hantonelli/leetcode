@@ -1,6 +1,6 @@
 package validatebinarysearchtree
 
-import ds "github.com/hantonelli/leetcode/data-structures"
+import "github.com/hantonelli/leetcode/ds"
 
 func isValidBST(root *ds.TreeNode) bool {
 	if root == nil {

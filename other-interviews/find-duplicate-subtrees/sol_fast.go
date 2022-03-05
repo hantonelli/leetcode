@@ -3,7 +3,7 @@ package findduplicatesubtrees
 import (
 	"fmt"
 
-	ds "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
 func findDuplicateSubtreesFast(root *ds.TreeNode) []*ds.TreeNode {

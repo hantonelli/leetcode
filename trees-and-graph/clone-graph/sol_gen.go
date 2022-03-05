@@ -1,6 +1,6 @@
 package clone_graph
 
-import ds "github.com/hantonelli/leetcode/data-structures"
+import "github.com/hantonelli/leetcode/ds"
 
 func cloneGraphG(node *Node) *Node {
 	if node == nil {

@@ -1,6 +1,6 @@
 package minimumwindowsubstring
 
-import dataStructures "github.com/hantonelli/leetcode/data-structures"
+import "github.com/hantonelli/leetcode/ds"
 
 func minWindow(s string, t string) string {
 	tMap := map[rune]int{}
@@ -35,7 +35,7 @@ func minWindow(s string, t string) string {
 			for i := 0; i < len(chPos) && 0 < countReq; i++ {
 				if start <= chPos[i] {
 					countReq--
-					end = dataStructures.Max(end, chPos[i])
+					end = ds.Max(end, chPos[i])
 				}
 			}
 			if countReq != 0 {

@@ -3,10 +3,10 @@ package maximumsubarray
 import (
 	"testing"
 
-	dataStructures "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-var base []int = dataStructures.RandArr(1000000)
+var base []int = ds.RandArr(1000000)
 
 func Benchmark_Works1(b *testing.B) {
 	for i := 0; i < b.N; i++ {

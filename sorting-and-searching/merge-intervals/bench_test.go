@@ -3,10 +3,10 @@ package mergeintervals
 import (
 	"testing"
 
-	dataStructures "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-var base [][]int = dataStructures.RandArrOfArr(10000, 100)
+var base [][]int = ds.RandArrOfArr(10000, 100)
 
 func Benchmark_Sol(b *testing.B) {
 	for i := 0; i < b.N; i++ {

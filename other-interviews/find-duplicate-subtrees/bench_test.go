@@ -3,7 +3,7 @@ package findduplicatesubtrees
 import (
 	"testing"
 
-	ds "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
 // var base []int = ds.RandArr(1000000)

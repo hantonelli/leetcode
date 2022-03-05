@@ -3,7 +3,7 @@ package meetingrooms2
 import (
 	"sort"
 
-	ds "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
 func minMeetingRooms(intervals [][]int) int {

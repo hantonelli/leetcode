@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"sort"
 	"testing"
-	// ds "github.com/hantonelli/leetcode/data-structures"
+	// "github.com/hantonelli/leetcode/ds"
 )
 
 func GetIntNArray(l, n int) []int {

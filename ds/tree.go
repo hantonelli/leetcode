@@ -1,4 +1,4 @@
-package dataStructures
+package ds
 
 // Definition for a binary tree node.
 type TreeNode struct {

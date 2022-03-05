@@ -1,6 +1,6 @@
 package longestvalidparentheses
 
-import ds "github.com/hantonelli/leetcode/data-structures"
+import "github.com/hantonelli/leetcode/ds"
 
 func longestValidParentheses(s string) int {
 	if len(s) < 1 {

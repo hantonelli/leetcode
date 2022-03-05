@@ -1,7 +1,7 @@
 package maximalrectangle
 
 import (
-	ds "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
 // Get the maximum area in a histogram given its heights

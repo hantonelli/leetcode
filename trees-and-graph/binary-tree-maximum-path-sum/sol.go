@@ -3,7 +3,7 @@ package main
 import (
 	"math"
 
-	ds "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
 func maxPathSum(n *ds.TreeNode) int {

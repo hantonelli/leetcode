@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	ds "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
 type Codec struct {

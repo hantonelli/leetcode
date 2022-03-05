@@ -1,7 +1,7 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/data-structures"
+	ll "github.com/hantonelli/leetcode/ds"
 )
 
 func mergeTwoLists(list1, list2 *ll.ListNode) *ll.ListNode {

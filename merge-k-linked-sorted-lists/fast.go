@@ -1,6 +1,6 @@
 package main
 
-import ll "github.com/hantonelli/leetcode/data-structures"
+import ll "github.com/hantonelli/leetcode/ds"
 
 func mergeKListsFast(lists []*ll.ListNode) *ll.ListNode {
 

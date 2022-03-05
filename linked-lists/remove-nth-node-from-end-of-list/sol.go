@@ -1,7 +1,7 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/data-structures"
+	ll "github.com/hantonelli/leetcode/ds"
 )
 
 func removeNthFromEnd(head *ll.ListNode, n int) *ll.ListNode {

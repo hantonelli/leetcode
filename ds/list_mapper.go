@@ -1,4 +1,4 @@
-package dataStructures
+package ds
 
 func ArrOfArrToArrLinkedList(aa [][]int) []*ListNode {
 	if len(aa) == 0 {

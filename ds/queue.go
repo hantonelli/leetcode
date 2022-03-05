@@ -1,4 +1,4 @@
-package dataStructures
+package ds
 
 // // Queue is a queue
 // type Queue interface {

@@ -3,10 +3,10 @@ package binarytreepaths
 import (
 	"fmt"
 
-	dataStructures "github.com/hantonelli/leetcode/data-structures"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-func binaryTreePaths(r *dataStructures.TreeNode) []string {
+func binaryTreePaths(r *ds.TreeNode) []string {
 	if r == nil {
 		return nil
 	}
