@@ -1,6 +1,6 @@
 package main
 
-func lengthOfLongestSubstring2(s string) int {
+func lengthOfLongestSubstringFast(s string) int {
 	if len(s) == 0 {
 		return 0
 	}

@@ -1,6 +1,6 @@
 package main
 
-func lengthOfLongestSubstring3(s string) int {
+func lengthOfLongestSubstringSmallest(s string) int {
 	maxLen, start := 0, 0
 	// upgrade1: since string only has 128 valid chars, use 128 char array instead of map[byte]int
 	charToIndex := make([]int, 128)

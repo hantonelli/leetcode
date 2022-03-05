@@ -39,6 +39,14 @@ func Test(t *testing.T) {
 			input:    "au",
 			expected: 2,
 		},
+		{
+			input:    "nfpdmpi",
+			expected: 5,
+		},
+		{
+			input:    "tmmzuxt",
+			expected: 5,
+		},
 	}
 
 	for _, tt := range tests {

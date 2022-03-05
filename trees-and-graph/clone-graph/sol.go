@@ -29,16 +29,13 @@ func cloneGraph(node *Node) *Node {
 	l := list.New()
 	l.PushFront(&ClonePair{original: node, copied: rootCopy})
 
-	var e *list.Element
-	var originalNe, clonedNe *Node
-	var ok bool
 	for l.Len() != 0 {
-		e = l.Front()
+		e := l.Front()
 		currentPair := e.Value.(*ClonePair)
 		l.Remove(e)
 
-		for _, originalNe = range currentPair.original.Neighbors {
-			clonedNe, ok = clonedNodes[originalNe.Val]
+		for _, originalNe := range currentPair.original.Neighbors {
+			clonedNe, ok := clonedNodes[originalNe.Val]
 			if !ok {
 				clonedNe = &Node{
 					Val:       originalNe.Val,

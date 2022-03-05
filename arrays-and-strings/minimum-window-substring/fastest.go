@@ -1,8 +1,8 @@
-package main
+package minimumwindowsubstring
 
 import "math"
 
-func minWindow(s string, t string) string {
+func minWindowFast(s string, t string) string {
 	if len(s) < len(t) {
 		return ""
 	}

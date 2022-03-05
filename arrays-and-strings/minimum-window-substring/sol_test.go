@@ -1,4 +1,4 @@
-package main
+package minimumwindowsubstring
 
 import (
 	"testing"
@@ -21,6 +21,11 @@ func Test(t *testing.T) {
 			s:      "a",
 			t:      "a",
 			expect: "a",
+		},
+		{
+			s:      "a",
+			t:      "aa",
+			expect: "",
 		},
 	}
 
