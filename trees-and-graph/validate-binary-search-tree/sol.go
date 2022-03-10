@@ -1,26 +1,49 @@
 package validatebinarysearchtree
 
-import "github.com/hantonelli/leetcode/ds"
+import (
+	"math"
 
-func isValidBST(root *ds.TreeNode) bool {
-	if root == nil {
+	"github.com/hantonelli/leetcode/ds"
+)
+
+func isValidBST(r *ds.TreeNode) bool {
+	if r == nil {
+		return false
+	}
+	return isValidBSTInner(r.Left, math.MinInt64, r.Val) &&
+		isValidBSTInner(r.Right, r.Val, math.MaxInt64)
+}
+
+func isValidBSTInner(r *ds.TreeNode, minV, maxV int) bool {
+	if r == nil {
 		return true
 	}
-	if root.Left != nil {
-		if root.Val <= root.Left.Val {
-			return false
-		}
-		if leftValid := isValidBST(root.Left); !leftValid {
+	if r.Val <= minV || maxV <= r.Val {
+		return false
+	}
+	if r.Left != nil {
+		if leftValid := isValidBSTInner(r.Left, minV, r.Val); !leftValid {
 			return false
 		}
 	}
-	if root.Right != nil {
-		if root.Right.Val <= root.Val {
-			return false
-		}
-		if rightValid := isValidBST(root.Right); !rightValid {
+	if r.Right != nil {
+		if rightValid := isValidBSTInner(r.Right, r.Val, maxV); !rightValid {
 			return false
 		}
 	}
 	return true
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
+func max(a, b int) int {
+	if a < b {
+		return b
+	}
+	return a
 }

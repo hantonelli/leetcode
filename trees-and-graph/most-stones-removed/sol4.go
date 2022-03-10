@@ -1,4 +1,4 @@
-package stonesRemove
+package most_stones_removed
 
 func removeStones4(stones [][]int) int {
 	var lenI, lenJ int

@@ -7,10 +7,13 @@ import (
 )
 
 func crackSafe(n int, k int) string {
+	// possible unique values
 	targetNumVisited := int(math.Pow(float64(k), float64(n)))
 
+	// initial combination
 	strPwd := strings.Repeat("0", n)
 	sbPwd := strings.Builder{}
+	// Grow the buffer to allocate for the required length
 	sbPwd.Grow(targetNumVisited + k)
 	sbPwd.WriteString(strPwd)
 
@@ -28,7 +31,9 @@ func crackSafeAfter(pwd *strings.Builder, visitedComb map[string]bool, targetNum
 		return true
 	}
 
-	// Pick the last n-1 digits added
+	// Pick the last n-1 digits added.
+	// That is the last combination skipping the first number.
+	// So that a new combination can be added by adding a new digit at the end.
 	lastDigits := pwd.String()[pwd.Len()-n+1:]
 	// Iterate all the possibles digits available in the dictionary
 	for ch := 0; ch < k; ch++ {

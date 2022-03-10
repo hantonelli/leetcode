@@ -1,4 +1,4 @@
-package stonesRemove
+package most_stones_removed
 
 func removeStones2(stones [][]int) int {
 	lenI := len(stones)

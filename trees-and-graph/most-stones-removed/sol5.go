@@ -1,6 +1,6 @@
-package stonesRemove
+package most_stones_removed
 
-func removeStones(stones [][]int) int {
+func removeStones5(stones [][]int) int {
 	lenI := len(stones)
 	lenJ := len(stones[0])
 	count := 0
