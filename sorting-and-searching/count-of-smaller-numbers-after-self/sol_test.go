@@ -30,6 +30,6 @@ func Test(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		require.EqualValues(t, tt.expected, countSmaller(tt.input))
+		require.EqualValues(t, tt.expected, countSmallerLC(tt.input))
 	}
 }

@@ -5,6 +5,30 @@ import (
 	"math"
 )
 
+type Point struct {
+	x    int
+	y    int
+	dist float64
+}
+
+type DistHeap []Point
+
+func (h DistHeap) Len() int           { return len(h) }
+func (h DistHeap) Less(i, j int) bool { return h[i].dist > h[j].dist }
+func (h DistHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+
+func (h *DistHeap) Push(x interface{}) {
+	*h = append(*h, x.(Point))
+}
+
+func (h *DistHeap) Pop() interface{} {
+	old := *h
+	n := len(old)
+	x := old[n-1]
+	*h = old[0 : n-1]
+	return x
+}
+
 func KClosest2(points [][]int, k int) [][]int {
 	if len(points) < k {
 		return points
@@ -32,28 +56,4 @@ func KClosest2(points [][]int, k int) [][]int {
 		res2[l] = []int{res[l].x, res[l].y}
 	}
 	return res2
-}
-
-type Point struct {
-	x    int
-	y    int
-	dist float64
-}
-
-type DistHeap []Point
-
-func (h DistHeap) Len() int           { return len(h) }
-func (h DistHeap) Less(i, j int) bool { return h[i].dist > h[j].dist }
-func (h DistHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
-
-func (h *DistHeap) Push(x interface{}) {
-	*h = append(*h, x.(Point))
-}
-
-func (h *DistHeap) Pop() interface{} {
-	old := *h
-	n := len(old)
-	x := old[n-1]
-	*h = old[0 : n-1]
-	return x
 }

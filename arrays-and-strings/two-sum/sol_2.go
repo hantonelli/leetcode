@@ -1,4 +1,4 @@
-package sum2
+package two_sum
 
 func twoSum2(nums []int, target int) []int {
 	positionMap := map[int]int{}

@@ -1,11 +1,11 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/ds"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-func mergeTwoLists(list1, list2 *ll.ListNode) *ll.ListNode {
-	root := &ll.ListNode{}
+func mergeTwoLists(list1, list2 *ds.ListNode) *ds.ListNode {
+	root := &ds.ListNode{}
 	prev := root
 	for list1 != nil && list2 != nil {
 		if list1.Val < list2.Val {

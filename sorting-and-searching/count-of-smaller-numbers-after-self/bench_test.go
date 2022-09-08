@@ -25,3 +25,9 @@ func Benchmark_Fastest(b *testing.B) {
 		countSmallerFastest(base)
 	}
 }
+
+func Benchmark_LC(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		countSmallerLC(base)
+	}
+}

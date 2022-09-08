@@ -46,6 +46,9 @@ func ListToTree(l []int) *TreeNode {
 }
 
 func TreetoList(r *TreeNode) []int {
+	if r == nil {
+		return []int{}
+	}
 	res := []int{r.Val}
 	nodes := []*TreeNode{r}
 	for 0 < len(nodes) {

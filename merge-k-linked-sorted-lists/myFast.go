@@ -1,10 +1,10 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/ds"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-func mergeKListsF(data []*ll.ListNode) *ll.ListNode {
+func mergeKListsF(data []*ds.ListNode) *ds.ListNode {
 	if len(data) == 0 {
 		return nil
 	}
@@ -18,8 +18,8 @@ func mergeKListsF(data []*ll.ListNode) *ll.ListNode {
 	return mergeF(left, right)
 }
 
-func mergeF(l, r *ll.ListNode) *ll.ListNode {
-	root := &ll.ListNode{}
+func mergeF(l, r *ds.ListNode) *ds.ListNode {
+	root := &ds.ListNode{}
 	prev := root
 	for l != nil && r != nil {
 		if l.Val < r.Val {

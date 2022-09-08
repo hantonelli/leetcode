@@ -1,8 +1,8 @@
 package main
 
-import ll "github.com/hantonelli/leetcode/ds"
+import "github.com/hantonelli/leetcode/ds"
 
-func mergeKListsFast(lists []*ll.ListNode) *ll.ListNode {
+func mergeKListsFast(lists []*ds.ListNode) *ds.ListNode {
 
 	n := len(lists)
 	if n == 0 {
@@ -11,7 +11,7 @@ func mergeKListsFast(lists []*ll.ListNode) *ll.ListNode {
 	return mergeSort(lists, 0, n-1)
 }
 
-func mergeSort(lists []*ll.ListNode, a int, z int) *ll.ListNode {
+func mergeSort(lists []*ds.ListNode, a int, z int) *ds.ListNode {
 	if a == z {
 		return lists[a]
 	}
@@ -21,8 +21,8 @@ func mergeSort(lists []*ll.ListNode, a int, z int) *ll.ListNode {
 	return merge(x, y)
 }
 
-func merge(x *ll.ListNode, y *ll.ListNode) *ll.ListNode {
-	node := ll.ListNode{}
+func merge(x *ds.ListNode, y *ds.ListNode) *ds.ListNode {
+	node := ds.ListNode{}
 	head := &node
 	ptr := head
 	for x != nil || y != nil {

@@ -1,14 +1,14 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/ds"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-func removeNthFromEnd(head *ll.ListNode, n int) *ll.ListNode {
+func removeNthFromEnd(head *ds.ListNode, n int) *ds.ListNode {
 	if n < 0 {
 		return head
 	}
-	var nNode, nNodePrev *ll.ListNode
+	var nNode, nNodePrev *ds.ListNode
 	curr := head
 	count := 1
 	for curr != nil {

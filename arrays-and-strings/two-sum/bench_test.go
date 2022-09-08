@@ -1,4 +1,4 @@
-package sum2
+package two_sum
 
 import "testing"
 

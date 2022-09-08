@@ -1,11 +1,11 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/ds"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-func mergeKLists(list []*ll.ListNode) *ll.ListNode {
-	var root, prev, curr *ll.ListNode
+func mergeKLists(list []*ds.ListNode) *ds.ListNode {
+	var root, prev, curr *ds.ListNode
 	var listsLowest int
 	for {
 		listsLowest = -1
@@ -17,7 +17,7 @@ func mergeKLists(list []*ll.ListNode) *ll.ListNode {
 		if listsLowest == -1 {
 			break
 		}
-		curr = &ll.ListNode{
+		curr = &ds.ListNode{
 			Val: list[listsLowest].Val,
 		}
 		if prev == nil {

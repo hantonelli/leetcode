@@ -34,6 +34,6 @@ func Test(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		require.EqualValues(t, tt.expected, MergeSort(tt.input))
+		require.EqualValues(t, tt.expected, MergeSort2(tt.input))
 	}
 }

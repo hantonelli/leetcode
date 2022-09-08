@@ -35,9 +35,13 @@ func Test(t *testing.T) {
 			s:        "()(()",
 			expected: 2,
 		},
+		{
+			s:        "()()",
+			expected: 4,
+		},
 	}
 
 	for _, tt := range tests {
-		require.Equal(t, tt.expected, longestValidParentheses(tt.s))
+		require.Equal(t, tt.expected, longestValidParentheses(tt.s), tt.s)
 	}
 }

@@ -1,11 +1,11 @@
 package main
 
 import (
-	ll "github.com/hantonelli/leetcode/ds"
+	"github.com/hantonelli/leetcode/ds"
 )
 
-func addTwoNumbers(l1 *ll.ListNode, l2 *ll.ListNode) *ll.ListNode {
-	head := ll.ListNode{}
+func addTwoNumbers(l1 *ds.ListNode, l2 *ds.ListNode) *ds.ListNode {
+	head := ds.ListNode{}
 	curr := &head
 	sum := 0
 	rest := 0
@@ -20,23 +20,23 @@ func addTwoNumbers(l1 *ll.ListNode, l2 *ll.ListNode) *ll.ListNode {
 			l2 = l2.Next
 		}
 		sum += rest
-		curr.Next = &ll.ListNode{Val: sum % 10}
+		curr.Next = &ds.ListNode{Val: sum % 10}
 		curr = curr.Next
 		rest = int(sum / 10)
 	}
 	if rest != 0 {
-		curr.Next = &ll.ListNode{Val: rest}
+		curr.Next = &ds.ListNode{Val: rest}
 	}
 	return head.Next
 }
 
-func addTwoNumbers1(l1 *ll.ListNode, l2 *ll.ListNode) *ll.ListNode {
-	head := ll.ListNode{}
+func addTwoNumbers1(l1 *ds.ListNode, l2 *ds.ListNode) *ds.ListNode {
+	head := ds.ListNode{}
 	curr := &head
 	rest := 0
 	for l1 != nil && l2 != nil {
 		num := l1.Val + l2.Val + rest
-		curr.Next = &ll.ListNode{
+		curr.Next = &ds.ListNode{
 			Val: num % 10,
 		}
 		curr = curr.Next
@@ -46,7 +46,7 @@ func addTwoNumbers1(l1 *ll.ListNode, l2 *ll.ListNode) *ll.ListNode {
 	}
 	for l1 != nil {
 		num := l1.Val + rest
-		curr.Next = &ll.ListNode{
+		curr.Next = &ds.ListNode{
 			Val: num % 10,
 		}
 		curr = curr.Next
@@ -55,7 +55,7 @@ func addTwoNumbers1(l1 *ll.ListNode, l2 *ll.ListNode) *ll.ListNode {
 	}
 	for l2 != nil {
 		num := l2.Val + rest
-		curr.Next = &ll.ListNode{
+		curr.Next = &ds.ListNode{
 			Val: num % 10,
 		}
 		curr = curr.Next
@@ -63,7 +63,7 @@ func addTwoNumbers1(l1 *ll.ListNode, l2 *ll.ListNode) *ll.ListNode {
 		l2 = l2.Next
 	}
 	if rest != 0 {
-		curr.Next = &ll.ListNode{
+		curr.Next = &ds.ListNode{
 			Val: rest,
 		}
 	}
